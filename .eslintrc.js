@@ -45,6 +45,7 @@ module.exports = {
         props: false,
       },
     ],
+    'class-methods-use-this': 0,
     'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],
     'import/prefer-default-export': 1,
     import: 0,

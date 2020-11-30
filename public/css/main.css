@@ -6,11 +6,6 @@ body {
   --black: #201a23;
 }
 
-.product-card figure {
-  text-align: center;
-  padding: 5px;
-}
-
 .navbar ul.social {
   display: flex;
 }
@@ -143,4 +138,15 @@ body {
 .cart-right {
   display: flex;
   align-items: center;
+}
+
+.table {
+  width: 100%;
+}
+
+.control {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

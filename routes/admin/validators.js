@@ -8,9 +8,12 @@ module.exports = {
     .withMessage('Must be valid email')
     .custom(async (email) => {
       const existingUser = await usersRepo.getOneBy({ email });
+
       if (existingUser) {
         throw new Error('Email in use');
       }
+
+      return true;
     }),
   requirePassword: check('password')
     .trim()
@@ -22,8 +25,10 @@ module.exports = {
     .withMessage('Must be between 4 and 20 characters')
     .custom((passwordConfirmation, { req }) => {
       if (passwordConfirmation !== req.body.password) {
-        throw new Error('Password must match');
+        throw new Error('Passwords must match');
       }
+
+      return true;
     }),
   requireEmailExists: check('email')
     .trim()

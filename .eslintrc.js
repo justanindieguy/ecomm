@@ -21,6 +21,7 @@ module.exports = {
     jest: true,
   },
   rules: {
+    'no-plusplus': 'off',
     'no-console': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'no-debugger': 0,
